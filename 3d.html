@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D desert</title>
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    min-height: 100vh;
+    background-color: black;
+}
+.box{
+    position: relative;
+    height: 300px;
+    width: 200px;
+    transform-style: preserve-3d;
+    animation: animate 22s linear infinite;
+}
+@keyframes animate{
+    0%{
+        transform:perspective(1500px) rotateY(0deg);
+    }
+    100%{
+        transform:perspective(1500px) rotateY(360deg);
+    }
+    
+}
+.box div{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transform-origin: center;
+    transform: rotateY(calc(var(--v) * 45deg)) translateZ(300px);
+    --webkit--box-reflect: below 0px linear-gradient(transparent,transparent,#0004);
+}
+.box div img{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.spin{
+    animation: spin 2s linear infinite;
+}
+@keyframes spin{
+    0%{
+        filter: hue-rotate(0deg);
+        transform:perspective(1500px) rotateY(0deg);
+        -webkit-box-reflect: below 0px linear-gradient(transparent,transparent,#0004);   
+    }
+    100%{
+        filter: hue-rotate(360deg);
+        transform:perspective(1500px) rotateY(-360deg);
+        -webkit-box-reflect: below 0px linear-gradient(transparent,transparent,#0004);
+    }
+    
+}
+
+    </style>
+</head>
+<script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+<body>
+    <div class="box">
+        <div style="--v: 1;"><img src="https://tse3.mm.bing.net/th?id=OIP.daHg-NWTHiyKItGmBmnaNQHaFj&pid=Api&P=0&h=180" alt="error"></div>
+        <div style="--v: 2;"><img src="https://tse1.mm.bing.net/th?id=OIP.TLWzRDRNOlqWdRvYj4MlDQHaEc&pid=Api&P=0&h=180" alt="error"></div>
+        <div style="--v: 3;"><img src="https://tse4.mm.bing.net/th?id=OIP.UO5zfUtr06no2jVRrmtpugHaEo&pid=Api&P=0&h=180" alt="error"></div>
+        <div  style="--v: 4;"><img src="https://tse2.mm.bing.net/th?id=OIP.5yUnp92dNH7QiyHBvQ80ZgHaEo&pid=Api&P=0&h=180" alt="error"></div>
+        <div style="--v: 5;"><img src="https://tse3.mm.bing.net/th?id=OIP.dx9poUPcLoMC52c4bVjSlQHaEK&pid=Api&P=0&h=180" alt="error"></div>
+        <div style="--v: 6;"><img src="https://tse3.mm.bing.net/th?id=OIP.-KTFHEFaBLJKDACTTAJ7UwHaEK&pid=Api&P=0&h=180" alt="error"></div>
+        <div style="--v: 7;"><img src="https://tse4.mm.bing.net/th?id=OIP.5XBpiwGxZ9pC_J7ufNz6ZgHaEg&pid=Api&P=0&h=180" alt="error"></div>
+        <div style="--v: 8;"><img src="https://tse1.mm.bing.net/th?id=OIP.LA21AL5TBEd2rP--Y3ZR7wHaD4&pid=Api&P=0&h=180" alt="error"></div>
+ </div>
+    
+</body>
+<script>
+    $(document).ready(function(){
+      $('.box div').click(function(){
+      if($(this).hasClass('spin')){
+       $('.box div').removeClass('spin');}
+       else{
+        $('.box div').removeClass('spin');
+        $(this).addClass('spin');
+       }
+    
+      });
+    });
+</script>
+
+</html>

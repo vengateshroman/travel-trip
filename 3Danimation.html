@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D mountain</title>
+    <link rel="stylesheet" href="3Danimation.css">
+</head>
+<script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+<body>
+    <div class="box">
+        <div style="--v: 1;"><img src="https://tse2.mm.bing.net/th?id=OIP.lz2LIDlNaDiv8wFFXjGoIAHaEo&pid=Api&P=0&h=180" alt="error"></div>
+        <div style="--v: 2;"><img src="https://tse4.mm.bing.net/th?id=OIP.B7o-zqltM5iTMouUt8mqfgHaEK&pid=Api&P=0&h=180" alt="error"></div>
+        <div style="--v: 3;"><img src="https://tse3.mm.bing.net/th?id=OIP.oTqh_e9BjeUm3rynwn_w_wHaEK&pid=Api&P=0&h=180" alt="error"></div>
+        <div  style="--v: 4;"><img src="https://tse3.mm.bing.net/th?id=OIP.nIj7Y8357-IxzEhSNGPJYAHaEo&pid=Api&P=0&h=180" alt="error"></div>
+        <div style="--v: 5;"><img src="https://tse3.mm.bing.net/th?id=OIP.l8PYxbHb7hR5Dr79DXRd8AHaE2&pid=Api&P=0&h=180" alt="error"></div>
+        <div style="--v: 6;"><img src="https://tse4.mm.bing.net/th?id=OIP.ztAkP_NTznklwkiiRf_eoQHaEo&pid=Api&P=0&h=180" alt="error"></div>
+        <div style="--v: 7;"><img src="https://tse2.mm.bing.net/th?id=OIP.H8rF4yORl_kyNy-yMS7VkgHaE8&pid=Api&P=0&h=180" alt="error"></div>
+        <div style="--v: 8;"><img src="https://tse4.mm.bing.net/th?id=OIP.91MP3vBthiRcjNc58qXPdgHaEo&pid=Api&P=0&h=180" alt="error"></div>
+ </div>
+    
+</body>
+<script>
+    $(document).ready(function(){
+      $('.box div').click(function(){
+      if($(this).hasClass('spin')){
+       $('.box div').removeClass('spin');}
+       else{
+        $('.box div').removeClass('spin');
+        $(this).addClass('spin');
+       }
+    
+      });
+    });
+</script>
+
+</html>
